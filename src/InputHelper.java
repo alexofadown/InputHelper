@@ -117,6 +117,24 @@ public class InputHelper {
         return x;
     }
 
+    public static String getRegExString(Scanner scan, String prompt, String regexPattern) {
+
+        String s;
+        boolean valid = false;
+
+        System.out.println(prompt);
+        do {
+            s = scan.nextLine();
+            if (s.matches(regexPattern)) {
+                valid = true;
+            }
+            else {
+                System.out.println("Error: Your input must match the specified format.");
+            }
+        } while (!valid);
+        return s;
+    }
+
 }
 
 

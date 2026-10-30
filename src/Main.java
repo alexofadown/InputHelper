@@ -18,5 +18,11 @@ public class Main {
         System.out.println("An integer between 0 and 20: " + rangedInt);
         System.out.println("A decimal number between 0 and 20: " + rangedDouble);
         System.out.println("An integer above 0: " + nonZeroInt);
+
+        String phoneNum = InputHelper.getRegExString(scan, "Enter your phone number [xxx-xxx-xxxx]", "\\d{3}-\\d{3}-\\d{4}");
+        System.out.println("Phone number: " + phoneNum);
+
+        String bday = InputHelper.getRegExString(scan, "Enter your birthday [mm/dd/yyyy]", "\\d{2}/\\d{2}/\\d{4}");
+        System.out.println("Birthday: " + bday);
     }
 }
